@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block style %}
+<style>
+
+    #card{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+
+    
+</style>
+{% endblock %}
+
+{% block body %}
+<center>
+    <div id = "card">
+        <div class="card" style="width: 16rem; height:10em">
+            <img src="static/images/prof.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="color: white;">Jey Prabu</h5>
+              <p class="card-text" style="color: white;">A tech enthusiast who's a Web Developer by interest and wanna be an AI Developer.</p>
+              <a class="github-button" style="background-color: black;" href="https://github.com/jeyprabu/" aria-label="Follow @jeyprabu on GitHub">Follow @jeyprabu</a>
+            </div>
+        </div>
+    </div>
+</center>
+{% endblock %}
