@@ -1,0 +1,1 @@
+Your uploaded images will be saved here. The various operations will be done once images are saved in here.
