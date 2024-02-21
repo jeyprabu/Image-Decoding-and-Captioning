@@ -3,7 +3,8 @@ This project deals with image processing. It mainly revolves around generating c
 To install the modules, run the following command.<br>
 ```pip install -r requirements.txt```<br>
 Once installed, run<br>
-```flask run``` to run ap.py
+```flask run``` <br>
+to run ap.py
 <br><br>
 
 ![Screenshot (135)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/24846130-a0e8-4b2d-9d40-13bd02dc61d4)
