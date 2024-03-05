@@ -137,5 +137,27 @@ Decode Images
         {% endif %}
     </div>
 </center>
+<script>
+    function validateAndSubmit(action) {
+        var fileInput = document.getElementById('fup');
+        var file = fileInput.files[0];
+        if (!file) {
+            alert('Please select a file to upload.');
+            return false; 
+        }
+        document.querySelector('input[name="action"]').value = action;
+        return true;
+    }
+
+    // Attach event listeners to buttons
+    document.querySelectorAll('.subbut').forEach(button => {
+        button.addEventListener('click', function(event) {
+            var action = event.target.value;
+            if (!validateAndSubmit(action)) {
+                event.preventDefault(); 
+            }
+        });
+    });
+</script>
 
 {% endblock %}
