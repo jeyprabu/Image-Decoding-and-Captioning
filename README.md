@@ -13,8 +13,10 @@ Once installed, run<br>
 to run ap.py
 <br><br>
 
-![Screenshot (135)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/24846130-a0e8-4b2d-9d40-13bd02dc61d4)
-![Screenshot (137)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/ce3f23e6-e181-4253-a0de-d2d436b57413)
-![Screenshot (138)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/3a2da3b7-ce7d-4829-adc7-47f593c8d53d)
-![Screenshot (139)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/03d812fa-5169-4853-b610-310b7657b6f0)
 
+
+![Screenshot (153)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/d0931379-47f8-49a9-9b88-c80cad94f873)
+![Screenshot (154)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/9d441c68-fe8b-4198-bb29-af52215bec62)
+![Screenshot (155)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/0c00c512-4478-40de-b8d7-7c4ee4266a86)
+![Screenshot (156)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/c391fa1f-a41e-48a7-b1d8-91b6ff2ad485)
+![Screenshot (152)](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/27f5de09-7629-41ee-8833-22a3767b9a88)
