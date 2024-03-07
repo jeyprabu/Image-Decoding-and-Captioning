@@ -1,21 +1,24 @@
+import cv2
+import os
 from flask import Flask,request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 from flask import render_template
 from utility import caption
 from edge import edges
 from feature import features
-import cv2
-import os
 from anomaly import anomalies
 
 path = 'static/img'
 app = Flask(__name__)
+
 photos = UploadSet('photos',IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
 configure_uploads(app,photos)
+
 @app.route("/",methods=["GET", "POST"])
 def homepage():
     return render_template('homepage.html')
+
 @app.route("/upload",methods=["GET","POST"])
 def upload():
     p=None
@@ -34,7 +37,7 @@ def upload():
             p = edges(image, filename)
             result = "Edges"
         elif action == 'feat':
-            image = cv2.imread(file_path) #Harris corner
+            image = cv2.imread(file_path) 
             if image is None:
                 return render_template('upload.html', cp="Error: Unable to load image", src=None)
             p = features(image, filename)
