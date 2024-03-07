@@ -1,112 +1,9 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-Decode Images
-{% endblock %}
+{% block title %} Decode Images {% endblock %}
 
 {% block style %}
-<style>
-     #up{
-        padding-top: 10px;
-        padding-left: 260px;
-        padding-right: 260px;
-        padding-bottom: 10px;
-    }
-    #up h2 {
-        color: white;
-    }
-
-    #cap{
-        padding: 10px;
-    }
-    /* DEMO-SPECIFIC STYLES */
-    .typewriter h1 {
-        background-color: black;
-        padding: 5px;
-        color:white;
-        width: auto;
-        text-align: center;
-        font-family: monospace;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
-        animation: 
-        typing 3.5s steps(30, end),
-        blink-caret .5s step-end infinite;
-    }
-
-    /* The typing effect */
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-    50% { border-color: black }
-    }
-    @media screen and (min-width: 1100px) {
-        .typewriter h1 {
-            font-size: 20px;
-        }
-        body{
-            size: 20px;
-        }
-    }
-
-    @media screen and (max-width: 1100px) {
-        .typewriter h1 {
-            font-size: 10px;
-            
-        }
-        body{
-            size: 10px;
-            background-color: black;
-            padding: 5px;
-        }
-    }
-
-    @keyframes zoom-in{
-        from {width: 0;height: 0;}
-        to {width: 100%;height: auto;}
-    }
-    #img{
-        padding: 30px;
-        animation: zoom-in 3s;
-    }
-    #info{
-        padding-top: 30px;
-        padding-right: 350px;
-        padding-left: 350px;
-        padding-bottom: 20px;
-    } 
-    .subbut {
-        padding: 3px;
-        background-color: #060080;
-        color: white;
-        border-radius: 2px;
-    }
-    .fminp {
-    background-color: #fff;
-    height: 31px;
-    padding: 3px 7px;
-    line-height: normal;
-    border: 1px solid #a6a6a6;
-    border-top-color: #949494;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
-    outline: 0;
-    color: #111;
-    font-size: 13px;
-    width: 70%;
-    }
-    br {
-        height: 3px;
-    }
-    
-</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -114,13 +11,13 @@ Decode Images
     <div id="up" style>
         <form method="POST" enctype="multipart/form-data" >
             <h3 style="color:white;">Decode Your Images</h3>
-            <input type="file" class="fminp" name="photo" id="fup"><br>
-            <button type="submit" class="subbut" name="action" value="upload">Generate Caption</button>
-            <button type="submit" class="subbut" name="action" value="edge">Detect Edges</button>
-            <button type="submit" class="subbut" name="action" value="feat">Extract Features</button>
+            <input type="file" class="fminp" name="photo" id="fup1"><br>
+            <button type="submit" class="subbut" name="action" value="upload" onclick="return Empty()">Generate Caption</button>
+            <button type="submit" class="subbut" name="action" value="edge" onclick="return Empty()">Detect Edges</button>
+            <button type="submit" class="subbut" name="action" value="feat" onclick="return Empty()">Extract Features</button>
             <br><br>
-            <input type="file" class="fminp" name="photo2" id="fup" placeholder="only for anomaly"><br>
-            <button type="submit"  class="subbut" name="action" value="ano">Find Anomalies</button>
+            <input type="file" class="fminp" name="photo2" id="fup2" placeholder="only for anomaly"><br>
+            <button type="submit"  class="subbut" name="action" value="ano" onclick="return Detect()">Find Anomalies</button>
             <br>
         </form>
     </div>
@@ -138,26 +35,30 @@ Decode Images
     </div>
 </center>
 <script>
-    function validateAndSubmit(action) {
-        var fileInput = document.getElementById('fup');
-        var file = fileInput.files[0];
-        if (!file) {
-            alert('Please select a file to upload.');
-            return false; 
-        }
-        document.querySelector('input[name="action"]').value = action;
-        return true;
+    function Empty() {
+        var image1 = document.getElementById('fup1');
+        var img1 = image1.files[0];
+        if(!img1) {
+            alert("Please upload an image!");
+            return false;
+        } 
     }
-
-    // Attach event listeners to buttons
-    document.querySelectorAll('.subbut').forEach(button => {
-        button.addEventListener('click', function(event) {
-            var action = event.target.value;
-            if (!validateAndSubmit(action)) {
-                event.preventDefault(); 
-            }
-        });
-    });
+    function Detect() {
+        var image1 = document.getElementById('fup1');
+        var img1 = image1.files[0];
+        var image2 = document.getElementById('fup2');
+        var img2 = image2.files[0];
+        if(!img1 && !img2) {
+            alert("Please upload the images!");
+            return false;
+        } else if(!img1) {
+            alert("Please upload reference image!");
+            return false;
+        } else if(!img2) {
+            alert("Please upload test image!")
+            return false;
+        } 
+    }
 </script>
 
 {% endblock %}
