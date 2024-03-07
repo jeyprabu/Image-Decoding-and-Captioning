@@ -1,33 +1,22 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-About
-{% endblock %}
+{% block title %} About {% endblock %}
 
 {% block style %}
-<style>
-
-    #card{
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    
-
-    
-</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock %}
 
 {% block body %}
-<center>
-    <div id = "card">
-        <div class="card" style="width: 16rem; height:10em">
-            <img src="static/images/prof.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title" style="color: white;">Jey Prabu</h5>
-              <p class="card-text" style="color: white;">A tech enthusiast who's a Web Developer by interest and wanna be an AI Developer.</p>
-              <a class="github-button" style="background-color: black;" href="https://github.com/jeyprabu/" aria-label="Follow @jeyprabu on GitHub">Follow @jeyprabu</a>
+    <center>
+        <div id = "card">
+            <div class="card" style="width: 16rem; height:10em">
+                <img src="static/images/prof.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: black; text-shadow: 2px 2px yellow">Jey Prabu</h5>
+                    <p class="card-text" style="color: black;">A tech enthusiast who's a Web Developer by interest and wanna be an AI Developer.</p>
+                    <a class="github-button" style="background-color: black;" href="https://github.com/jeyprabu/" aria-label="Follow @jeyprabu on GitHub">Follow @jeyprabu</a>
+                </div>
             </div>
         </div>
-    </div>
-</center>
+    </center>
 {% endblock %}
