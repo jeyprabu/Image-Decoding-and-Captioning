@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import cv2
 path = 'static/img'
+
 def edges(image, filename):
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     edges = cv2.Canny(image= image_rgb, threshold1=100, threshold2=700)
@@ -16,4 +17,3 @@ def edges(image, filename):
     name = path+"/"+filename+".png"
     plt.savefig(name)
     return name
-
