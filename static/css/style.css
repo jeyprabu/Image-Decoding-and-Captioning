@@ -4,9 +4,6 @@ body {
     justify-content: center;
     background-color: black;
 }
-#top-div{
-    padding: 20px;
-}
 .typewriter {
     border-radius: 20px; 
     background: rgb(14,0,255);
@@ -109,6 +106,9 @@ center {
 @keyframes zoom-in{
     from {width: 0;height: 0;}
     to {width: 100%;height: auto;}
+}
+#top-div{
+    padding: 20px;
 }
 #img{
     padding: 30px;
