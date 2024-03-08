@@ -1,6 +1,7 @@
 # Image-Decoding-and-Captioning
 This project deals with image processing. It mainly revolves around generating captions for the uploaded image, detecting edges and corners with features and find anomalies based on comparison. Captioning is done using CNN and LSTM. Edges are detected using Canny Edge Detection algorithm, corners are found using Harris Corner Algorithm and anomalies are found using absolute pixel difference and thresholding.<br>
-CNN and LSTM Model for captioning.
+CNN and LSTM Model for captioning.<br>
+Python - 3.10
 To download captioning dataset, visit<br>
 <a href="https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip">Flickr_8K Dataset</a>
 <a href="https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip">Flickr_8K Text</a><br>
