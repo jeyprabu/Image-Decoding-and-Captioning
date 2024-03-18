@@ -1,12 +1,9 @@
 from pickle import load
 from numpy import argmax
 from keras.preprocessing.sequence import pad_sequences
-from keras.applications.vgg16 import VGG16
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
-from keras.applications.vgg16 import preprocess_input
-from keras.models import Model
-from keras.models import load_model
+from keras.applications.vgg16 import VGG16, preprocess_input
+from keras.preprocessing.image import load_img, img_to_array
+from keras.models import Model, load_model
 
 def word_for_id(integer, tokenizer):
     for word, index in tokenizer.word_index.items():
@@ -49,4 +46,4 @@ def caption(test):
     d = description.split(" ")
     d = d[1:-1]
     description = " ".join(d)
-    return description.title()
+    return description.capitalize()
