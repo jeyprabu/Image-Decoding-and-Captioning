@@ -7,6 +7,14 @@ To download captioning dataset, visit<br>
 <a href="https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip">Flickr_8K Text</a><br>
 ![cnn and lstm](https://github.com/jeyprabu/Image-Decoding-and-Captioning/assets/135853635/07e52e50-2b2d-4688-8ca9-ce75afdc136b)
 <br>
+Before installing modules, create an environment. To create it run the command<br>
+```python -m venv .env```<br>
+Enter environment<br>
+```cd .env```<br>
+To clone repository, run<br>
+```git clone https://github.com/jeyprabu/Image-Decoding-and-Captioning.git```<br>
+Then, <br>
+```cd Image-Decoding-and-Captioning```<br>
 To install the modules, run the following command.<br>
 ```pip install -r requirements.txt```<br>
 Once installed, run<br>
