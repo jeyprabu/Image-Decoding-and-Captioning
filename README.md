@@ -17,9 +17,8 @@ Then, <br>
 ```cd Image-Decoding-and-Captioning```<br>
 To install the modules, run the following command.<br>
 ```pip install -r requirements.txt```<br>
-Once installed, run<br>
-```flask run``` <br>
-to run ap.py
+Once installed, run the app<br>
+```flask run``` or ```python app.py```
 <br><br>
 
 
